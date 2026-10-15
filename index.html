@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coach Nina Mentorship Academy: Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#13294B;--navy2:#1d3a66;--green:#4A9A3F;--green2:#e8f4e5;--bg:#f5f7fa;--line:#e3e8ef;--mut:#6b7a90}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:#1b2a3d;font-size:14px}
+h1,h2,h3,.brand,.stat b{font-family:Oswald,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.5px;margin:0}
+.app{display:flex;min-height:100vh}
+.side{width:240px;background:var(--navy);color:#fff;padding:22px 14px;flex-shrink:0}
+.brand{font-size:22px;line-height:1.1}.brand span{color:var(--green)}.sub{font-size:11px;opacity:.7;margin:4px 0 26px}
+.nav a{display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:8px;color:#cfd8e6;text-decoration:none;cursor:pointer;margin-bottom:4px;font-weight:500}
+.nav a:hover{background:var(--navy2)}.nav a.on{background:var(--green);color:#fff}
+.nav .sep{font-size:10px;opacity:.5;margin:18px 12px 6px;text-transform:uppercase;letter-spacing:1px}
+.main{flex:1;padding:26px 32px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.top h1{font-size:28px;color:var(--navy)}.top p{margin:4px 0 0;color:var(--mut)}
+.sample{background:#fff4d6;color:#8a6200;border:1px solid #f1d58a;font-size:11px;padding:4px 10px;border-radius:20px;font-weight:600}
+.user{display:flex;gap:10px;align-items:center}.av{width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:600}
+.grid{display:grid;gap:18px}.g4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:2fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h3{font-size:15px;color:var(--navy);margin-bottom:12px}
+.stat{border-left:4px solid var(--green)}.stat small{color:var(--mut)}.stat b{display:block;font-size:30px;color:var(--navy);margin:4px 0}
+.bar{height:9px;background:#e6ebf2;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--green)}
+.btn{background:var(--green);color:#fff;border:0;padding:9px 16px;border-radius:8px;font-weight:600;cursor:pointer;font-family:inherit}
+.btn.n{background:var(--navy)}.btn.o{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.row:last-child{border:0}
+.tag{font-size:11px;padding:3px 9px;border-radius:12px;background:var(--green2);color:#2f6e27;font-weight:600}
+.tag.b{background:#e3ebf7;color:var(--navy)}.tag.r{background:#fde8e8;color:#a33}
+.next{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border:0}.next h3{color:#fff}.next p{opacity:.8}
+.mods{display:grid;grid-template-columns:330px 1fr;gap:18px}
+.mod{margin-bottom:10px}.mod h4{margin:0;padding:10px;background:var(--navy);color:#fff;border-radius:8px;font-family:Oswald;text-transform:uppercase;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.les{display:flex;gap:10px;align-items:center;padding:9px 10px;cursor:pointer;border-bottom:1px solid var(--line)}.les:hover{background:var(--bg)}.les.cur{background:var(--green2)}
+.chk{width:20px;height:20px;border-radius:50%;border:2px solid #c3ccd8;display:grid;place-items:center;font-size:11px;color:#fff;flex-shrink:0}.chk.d{background:var(--green);border-color:var(--green)}
+.video{aspect-ratio:16/9;background:linear-gradient(135deg,#0d1d36,var(--navy2));border-radius:12px;display:grid;place-items:center;color:#fff;position:relative}
+.play{width:74px;height:74px;border-radius:50%;background:var(--green);display:grid;place-items:center;font-size:28px;cursor:pointer}
+.video .ctl{position:absolute;bottom:0;left:0;right:0;padding:12px 16px;display:flex;gap:12px;align-items:center;font-size:12px}
+input,select,textarea{width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:13px;margin:4px 0 12px}
+label{font-size:12px;font-weight:600;color:var(--mut)}
+table{width:100%;border-collapse:collapse}th{text-align:left;font-size:11px;text-transform:uppercase;color:var(--mut);padding:10px;border-bottom:2px solid var(--line)}td{padding:11px 10px;border-bottom:1px solid var(--line)}
+tr.click{cursor:pointer}tr.click:hover{background:var(--bg)}
+.date{background:var(--navy);color:#fff;border-radius:10px;width:64px;text-align:center;padding:8px 0;font-family:Oswald}.date b{display:block;font-size:24px}
+.screen{display:none}.screen.on{display:block}
+.modal{position:fixed;inset:0;background:rgba(10,20,40,.5);display:none;place-items:center}.modal.on{display:grid}.modal .card{width:560px}
+.foot{margin-top:24px;font-size:11px;color:var(--mut);text-align:center}
+</style></head><body><div class="app">
+<aside class="side"><div class="brand">Coach Nina<br><span>Mentorship Academy</span></div><div class="sub">Tax Professional Program · Mockup</div>
+<nav class="nav">
+<div class="sep">Mentee</div>
+<a data-s="dash" class="on">🏠 Dashboard</a><a data-s="course">🎓 Course Library</a><a data-s="log">📝 Activity Log</a><a data-s="live">💻 Live Classes</a>
+<div class="sep">Coach</div><a data-s="admin">📈 Admin: Mentees</a></nav></aside>
+<main class="main">
+
+<section class="screen on" id="dash"><div class="top"><div><h1>Welcome back, Maria</h1><p>Tax Professional Mentorship · Cohort 1 (Nov 2026)</p></div><div class="user"><span class="sample">SAMPLE DATA</span><div class="av">MR</div></div></div>
+<div class="grid g4"><div class="card stat"><small>Program progress</small><b>42%</b><div class="bar"><i style="width:42%"></i></div></div>
+<div class="card stat"><small>Lessons completed</small><b>10 / 24</b><small>4 modules</small></div>
+<div class="card stat"><small>Live classes attended</small><b>1 / 3</b><small>Next: Nov 19</small></div>
+<div class="card stat"><small>Activities logged</small><b id="actCount">7</b><small>this program</small></div></div>
+<div class="grid g2" style="margin-top:18px"><div class="grid">
+<div class="card next"><h3>▶ Continue: Next Lesson</h3><p>Module 2 · Lesson 3: Filing Status &amp; Dependents</p><div class="bar" style="background:#ffffff33"><i style="width:35%"></i></div><br><button class="btn" onclick="go('course')">Resume Lesson</button></div>
+<div class="card"><h3>Recent Activity</h3><div id="recent"></div></div></div>
+<div class="grid"><div class="card"><h3>Upcoming Live Class</h3><div style="display:flex;gap:12px;align-items:center"><div class="date">NOV<b>19</b></div><div><b>Live Class #2: Schedule C &amp; Self-Employed Clients</b><br><small style="color:var(--mut)">Thu · 7:00 PM ET · Zoom</small></div></div><br><button class="btn n" onclick="go('live')">View Schedule</button></div>
+<div class="card"><h3>My Tasks</h3><div id="tasks"></div></div></div></div></section>
+
+<section class="screen" id="course"><div class="top"><div><h1>Course Library</h1><p>Tax Professional Foundations · on-demand, watch anytime</p></div><span class="sample">SAMPLE MODULES</span></div>
+<div class="mods"><div class="card" id="modlist"></div>
+<div><div class="video"><div class="play" onclick="this.textContent=this.textContent=='▶'?'❚❚':'▶'">▶</div><div class="ctl"><span>0:00</span><div class="bar" style="flex:1"><i style="width:0"></i></div><span id="dur">18:24</span></div></div>
+<div class="card" style="margin-top:16px"><span class="tag b" id="lmod">Module</span><h2 id="ltitle" style="color:var(--navy);margin:10px 0 6px">Lesson</h2><p style="color:var(--mut)">Video placeholder. Coach Nina's pre-recorded lesson goes here. Includes downloadable worksheet and lesson notes.</p>
+<div style="display:flex;gap:10px"><button class="btn" id="markBtn" onclick="toggleDone()">✓ Mark Complete</button><button class="btn o">⬇ Worksheet (PDF)</button><button class="btn o" onclick="nextLesson()">Next Lesson →</button></div></div></div></div></section>
+
+<section class="screen" id="log"><div class="top"><div><h1>Activity Log</h1><p>Record what you did: activities, tasks and wins. Coach Nina sees these.</p></div><span class="sample">SAMPLE DATA</span></div>
+<div class="grid" style="grid-template-columns:1fr 1.6fr"><div class="card"><h3>Add Entry</h3><form id="f">
+<label>Type</label><select id="ft"><option>Activity</option><option>Task</option><option>Accomplishment</option></select>
+<label>Title</label><input id="fn" required placeholder="e.g. Completed 3 practice 1040 returns">
+<label>Date</label><input id="fd" type="date" value="2026-11-12">
+<label>Hours</label><input id="fh" type="number" step=".5" value="1">
+<label>Notes</label><textarea id="fx" rows="3" placeholder="Details, what you learned, blockers..."></textarea>
+<button class="btn" style="width:100%">+ Save Entry</button></form></div>
+<div class="card"><h3>My Entries</h3><table><thead><tr><th>Date</th><th>Type</th><th>Entry</th><th>Hrs</th></tr></thead><tbody id="logt"></tbody></table></div></div></section>
+
+<section class="screen" id="live"><div class="top"><div><h1>Live Classes</h1><p>3 live training sessions before Christmas · Zoom</p></div><span class="sample">SAMPLE DATES</span></div>
+<div class="grid g3" id="classes"></div>
+<div class="card" style="margin-top:18px"><h3>Replays</h3><div class="row"><div><b>Live Class #1: Kickoff &amp; Program Roadmap</b><br><small style="color:var(--mut)">Recorded Nov 5, 2026 · 1h 12m</small></div><button class="btn o">▶ Watch Replay</button></div><div class="row"><div><b>Orientation Q&amp;A (bonus)</b><br><small style="color:var(--mut)">Recorded Nov 2, 2026 · 38m</small></div><button class="btn o">▶ Watch Replay</button></div></div></section>
+
+<section class="screen" id="admin"><div class="top"><div><h1>Coach Nina: Admin</h1><p>Monitor every mentee's progress and participation</p></div><div class="user"><span class="sample">SAMPLE DATA</span><div class="av" style="background:var(--navy)">CN</div></div></div>
+<div class="grid g4"><div class="card stat"><small>Active mentees</small><b>8</b></div><div class="card stat"><small>Avg. progress</small><b>47%</b></div><div class="card stat"><small>Live attendance</small><b>81%</b></div><div class="card stat" style="border-color:#c44"><small>Need attention</small><b>2</b><small>inactive 7+ days</small></div></div>
+<div class="card" style="margin-top:18px"><h3>Mentees: click a row to drill in</h3><table><thead><tr><th>Mentee</th><th>Progress</th><th>Lessons</th><th>Live attended</th><th>Activities</th><th>Last active</th><th>Status</th></tr></thead><tbody id="mt"></tbody></table></div></section>
+<div class="foot">Clickable mockup for review · All names, dates and numbers are SAMPLE data</div>
+</main></div>
+<div class="modal" id="modal" onclick="if(event.target==this)this.classList.remove('on')"><div class="card" id="mbody"></div></div>
+<script>
+const $=s=>document.querySelector(s);
+function go(s){document.querySelectorAll('.screen').forEach(e=>e.classList.toggle('on',e.id==s));document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('on',a.dataset.s==s))}
+document.querySelectorAll('.nav a').forEach(a=>a.onclick=()=>go(a.dataset.s));
+const mods=[["Module 1: Getting Started as a Tax Pro",["Welcome & How This Program Works","Getting Your PTIN & EFIN","IRS Circular 230 & Ethics","Setting Up Your Tax Office","Choosing Tax Software"]],
+["Module 2: Individual Returns (Form 1040)",["Income Types: W-2, 1099 & More","Standard vs. Itemized Deductions","Filing Status & Dependents","Credits: EITC, CTC & Education","Due Diligence (Form 8867)","Practice Return Walkthrough"]],
+["Module 3: Self-Employed & Small Business",["Schedule C Basics","Business Expenses & Records","Self-Employment Tax","Quarterly Estimated Payments","Practice: Schedule C Return"]],
+["Module 4: Growing Your Tax Business",["Client Intake & Onboarding","Pricing Your Services","Bank Products & Refund Transfers","Marketing in Tax Season","Offering Loans & Financial Services","Compliance & Record Retention","Program Wrap-Up & Next Steps","Certification Checklist"]]];
+let done=new Set(["0-0","0-1","0-2","0-3","0-4","1-0","1-1","2-0","2-1","3-0"]),cur="1-2";
+function renderMods(){$('#modlist').innerHTML=mods.map((m,i)=>`<div class="mod"><h4>${m[0]}<span>${m[1].filter((_,j)=>done.has(i+'-'+j)).length}/${m[1].length}</span></h4>${m[1].map((l,j)=>{const k=i+'-'+j;return`<div class="les ${k==cur?'cur':''}" onclick="pick('${k}')"><span class="chk ${done.has(k)?'d':''}">${done.has(k)?'✓':''}</span><span>${j+1}. ${l}</span></div>`}).join('')}</div>`).join('');
+const[i,j]=cur.split('-').map(Number);$('#lmod').textContent=mods[i][0].split(':')[0];$('#ltitle').textContent=mods[i][1][j];$('#markBtn').textContent=done.has(cur)?'✓ Completed':'✓ Mark Complete'}
+function pick(k){cur=k;renderMods()}function toggleDone(){done.has(cur)?done.delete(cur):done.add(cur);renderMods()}
+function nextLesson(){let[i,j]=cur.split('-').map(Number);j++;if(j>=mods[i][1].length){i=(i+1)%mods.length;j=0}pick(i+'-'+j)}
+renderMods();
+let log=[["2026-11-11","Accomplishment","Passed Module 1 quiz (92%)",.5],["2026-11-10","Activity","Completed 2 practice 1040 returns",3],["2026-11-09","Task","Applied for EFIN with IRS",1],["2026-11-07","Activity","Shadowed Coach Nina on client intake call",1.5],["2026-11-06","Accomplishment","Received PTIN",.5],["2026-11-05","Activity","Attended Live Class #1",1.2],["2026-11-04","Task","Set up tax software trial account",1]];
+const tc={Activity:'b',Task:'',Accomplishment:'r'};
+function renderLog(){$('#logt').innerHTML=log.map(r=>`<tr><td>${r[0]}</td><td><span class="tag ${r[1]=='Accomplishment'?'':'b'}">${r[1]=='Accomplishment'?'🏆 ':''}${r[1]}</span></td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join('');
+$('#recent').innerHTML=log.slice(0,4).map(r=>`<div class="row"><span>${r[2]}</span><span class="tag ${r[1]=='Task'?'b':''}">${r[1]}</span></div>`).join('');$('#actCount').textContent=log.length}
+$('#f').onsubmit=e=>{e.preventDefault();log.unshift([$('#fd').value,$('#ft').value,$('#fn').value,$('#fh').value]);$('#fn').value='';$('#fx').value='';renderLog()};renderLog();
+const tasks=[["Finish Module 2 lessons","Due Nov 18",0],["Submit practice return #3","Due Nov 20",0],["Upload EFIN confirmation","Due Nov 22",0],["Watch Live Class #1 replay","Done",1]];
+$('#tasks').innerHTML=tasks.map(t=>`<div class="row"><span style="display:flex;gap:8px;align-items:center"><span class="chk ${t[2]?'d':''}">${t[2]?'✓':''}</span>${t[0]}</span><small style="color:var(--mut)">${t[1]}</small></div>`).join('');
+const cls=[["NOV","5","Live Class #1: Kickoff & Program Roadmap","Thu, Nov 5, 2026 · 7:00 PM ET","done"],["NOV","19","Live Class #2: Schedule C & Self-Employed Clients","Thu, Nov 19, 2026 · 7:00 PM ET","next"],["DEC","10","Live Class #3: Tax Season Launch & Q&A","Thu, Dec 10, 2026 · 7:00 PM ET","later"]];
+$('#classes').innerHTML=cls.map(c=>`<div class="card"><div style="display:flex;gap:12px;align-items:center;margin-bottom:12px"><div class="date">${c[0]}<b>${c[1]}</b></div><span class="tag ${c[4]=='done'?'b':''}">${c[4]=='done'?'Completed':c[4]=='next'?'Up next':'Scheduled'}</span></div><h3>${c[2]}</h3><p style="color:var(--mut)">${c[3]}<br>Zoom · 90 min · Hosted by Coach Nina</p>${c[4]=='done'?'<button class="btn o">▶ Watch Replay</button>':c[4]=='next'?'<button class="btn" onclick="alert(\'Sample: opens Zoom meeting link\')">Join Live Class</button> <button class="btn o">+ Calendar</button>':'<button class="btn o">+ Add to Calendar</button>'}</div>`).join('');
+const ms=[["Maria Rodriguez",42,10,1,7,"Today"],["James Carter",71,17,1,12,"Today"],["Aisha Thompson",63,15,1,9,"Yesterday"],["Kevin Nguyen",38,9,1,5,"2 days ago"],["Danielle Brooks",88,21,1,15,"Today"],["Luis Hernandez",12,3,0,1,"9 days ago"],["Tanya Williams",54,13,1,8,"3 days ago"],["Marcus Lee",8,2,0,0,"12 days ago"]];
+$('#mt').innerHTML=ms.map((m,i)=>`<tr class="click" onclick="drill(${i})"><td><b>${m[0]}</b></td><td style="width:180px"><div style="display:flex;gap:8px;align-items:center"><div class="bar" style="flex:1"><i style="width:${m[1]}%"></i></div>${m[1]}%</div></td><td>${m[2]}/24</td><td>${m[3]}/1</td><td>${m[4]}</td><td>${m[5]}</td><td>${m[5].includes('days')&&parseInt(m[5])>=7?'<span class="tag r">Inactive</span>':'<span class="tag">On track</span>'}</td></tr>`).join('');
+function drill(i){const m=ms[i];$('#mbody').innerHTML=`<div style="display:flex;justify-content:space-between"><h2 style="color:var(--navy)">${m[0]}</h2><span class="sample">SAMPLE</span></div><p style="color:var(--mut)">Tax Professional · Cohort 1 · Last active ${m[5]}</p><div class="bar"><i style="width:${m[1]}%"></i></div><p><b>${m[1]}%</b> complete · ${m[2]}/24 lessons · ${m[3]}/1 live classes so far · ${m[4]} activities logged</p><h3>Module progress</h3>${mods.map((x,k)=>{const p=Math.max(0,Math.min(100,Math.round(m[1]*1.6-k*35)));return`<div class="row"><span>${x[0]}</span><span style="width:120px" class="bar"><i style="width:${p}%"></i></span></div>`}).join('')}<br><button class="btn">✉ Message Mentee</button> <button class="btn o" onclick="$('#modal').classList.remove('on')">Close</button>`;$('#modal').classList.add('on')}
+</script></body></html>
